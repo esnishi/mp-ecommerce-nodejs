@@ -53,7 +53,7 @@ console.log(payment_data);
        console.log(error);
      });
 
-console.log('step 04 ');
+
 
 
 
