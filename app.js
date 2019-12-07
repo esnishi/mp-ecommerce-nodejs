@@ -32,9 +32,9 @@ app.get('/detail', function (req, res) {
 app.post('/processar_pagamento', function (req, res) {
 console.log('step 01 ');
  mercadopago.configurations.setAccessToken("TEST-6947404896832499-120714-83ea9df1a054e706ad0e12d793be07ab-184746054");
-console.log('step 02 ');
+console.log('step 02 ' +req.body.token);
 
-console.log(req.body);
+
  var payment_data = {
    transaction_amount: 181,
    token: req.body.token,

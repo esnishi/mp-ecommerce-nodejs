@@ -72,9 +72,9 @@ function doPay(event){
     event.preventDefault();
     if(!doSubmit){
         var $form = document.querySelector('#pay');
-        alert("token 01");
+
         window.Mercadopago.createToken($form, sdkResponseHandler); // The function "sdkResponseHandler" is defined below
- alert("token 02");
+
         return false;
     }
 };
