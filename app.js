@@ -1,5 +1,9 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
+var body-parser  = require('body-parser');
+var mercadopago = require('mercadopago');
+
+
 var port = process.env.PORT || 3000
 
 var app = express();
@@ -21,7 +25,6 @@ app.get('/detail', function (req, res) {
 
 app.post('/processar_pagamento', function (req, res) {
 
- var mercadopago = require('mercadopago');
  mercadopago.configurations.setAccessToken("TEST-6947404896832499-120714-83ea9df1a054e706ad0e12d793be07ab-184746054");
 
  var payment_data = {
