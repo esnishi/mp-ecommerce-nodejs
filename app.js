@@ -48,6 +48,7 @@ console.log('step 022 ' );
 console.log(payment_data);
  // Save and posting the payment
 
+
  mercadopago.payment.save(payment_data).then(function (data) {
        console.log('metodo - save  ');
        console.log(data);
