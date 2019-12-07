@@ -37,8 +37,9 @@ console.log('step 02 ');
      email: 'destini@live.com'
    }
  };
-console.log('step 03 ');
+console.log(payment_data);
  // Save and posting the payment
+    console.log(data);
  mercadopago.payment.save(payment_data).then(function (data) {
        console.log(data);
        res.send(data);
