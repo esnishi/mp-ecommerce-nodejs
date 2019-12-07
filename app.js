@@ -19,9 +19,12 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.post('/processar_pagamento', function (req, res) {
+app.post('/processar_pagamento', function (req, res, body) {
+
   console.log('the response will be sent by the next function ...');
 
+    var text = JSON.parse(body);
+     console.log(text);
 
   res.send('Hello from B!');
 });
