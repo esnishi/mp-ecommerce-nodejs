@@ -19,14 +19,32 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.post('/processar_pagamento', function (req, res, body) {
+app.post('/processar_pagamento', function (req, res) {
 
-  console.log('the response will be sent by the next function ...');
+ var mercadopago = require('mercadopago');
+ mercadopago.configurations.setAccessToken("TEST-6947404896832499-120714-83ea9df1a054e706ad0e12d793be07ab-184746054");
 
-    var text = JSON.parse(body);
-     console.log(text);
+ var payment_data = {
+   transaction_amount: 181,
+   token: 'ff8080814c11e237014c1ff593b57b4d'
+   description: 'Lightweight Silk Watch',
+   installments: 1,
+   payment_method_id: 'visa',
+   payer: {
+     email: 'destini@live.com'
+   }
+ };
 
-  res.send('Hello from B!');
+ // Save and posting the payment
+ mercadopago.payment.save(payment_data).then(function (data) {
+       console.log(data);
+       res.send(data);
+     }).catch(function (error) {
+       console.log(error);
+     });
+
+
+
 });
 
 app.listen(port);
