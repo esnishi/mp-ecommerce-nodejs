@@ -12,7 +12,7 @@ var mercadopago = require('mercadopago');
 
 var port = process.env.PORT || 3000
 
-var app = express();
+
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
