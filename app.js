@@ -36,10 +36,10 @@ console.log('step 022 ' );
 
 
  var payment_data = {
-   transaction_amount: 181,
+   transaction_amount: parseFloat(req.body.amount) ,
    token: req.body.token,
    description: req.body.description,
-   installments: req.body.installments,
+   installments: parseInt(req.body.installments),
    payment_method_id: req.body.payment_method_id,
    payer: {
      email: req.body.email

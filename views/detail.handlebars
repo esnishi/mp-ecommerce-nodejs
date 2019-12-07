@@ -132,8 +132,8 @@
                                                   <select id="installments" class="form-control" name="installments"></select>
                                              </li>
                                            </ul>
-                                           <input type="hidden" name="amount" id="amount"/>
-                                           <input type="hidden" name="description"/>
+                                           <input type="hidden" name="amount" id="amount" value="{{price}}" />
+                                           <input type="hidden" name="description"  />
                                            <input type="hidden" name="paymentMethodId" />
                                            <input type="submit" value="Pay!" />
                                        </fieldset>
@@ -267,7 +267,7 @@ function setInstallmentInfo(status, response) {
            card.setAttribute('type', 'hidden');
            card.setAttribute('value', response.id);
            form.appendChild(card);
-           alert("Formulario ");
+
            doSubmit=true;
            form.submit();
        }
