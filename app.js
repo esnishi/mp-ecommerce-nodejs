@@ -24,9 +24,9 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/processar_pagamento', function (req, res) {
-
+console.log('step 01 ');
  mercadopago.configurations.setAccessToken("TEST-6947404896832499-120714-83ea9df1a054e706ad0e12d793be07ab-184746054");
-
+console.log('step 02 ');
  var payment_data = {
    transaction_amount: 181,
    token: 'ff8080814c11e237014c1ff593b57b4d',
@@ -37,7 +37,7 @@ app.post('/processar_pagamento', function (req, res) {
      email: 'destini@live.com'
    }
  };
-
+console.log('step 03 ');
  // Save and posting the payment
  mercadopago.payment.save(payment_data).then(function (data) {
        console.log(data);
@@ -46,7 +46,7 @@ app.post('/processar_pagamento', function (req, res) {
        console.log(error);
      });
 
-
+console.log('step 04 ');
 
 });
 
