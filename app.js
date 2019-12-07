@@ -48,6 +48,8 @@ console.log('step 03 ');
 
 console.log('step 04 ');
 
+  res.render('detail', req.query);
+
 });
 
 app.listen(port);
