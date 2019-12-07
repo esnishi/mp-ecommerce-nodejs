@@ -1,4 +1,4 @@
-
+<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
 <div class="as-search-wrapper" role="main">
     <div class="as-navtuck-wrapper">
@@ -151,8 +151,8 @@
 </div>
 
 
-   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-   <script type="text/javascript">
+
+   <script >
    window.Mercadopago.setPublishableKey("TEST-ca06f60c-a532-4639-ae30-94af5e6b74fa");
 
    window.Mercadopago.getIdentificationTypes();
@@ -219,6 +219,8 @@
            alert(`payment method info error: ${response}`);
        }
    };
+
+
    doSubmit = false;
    addEvent(document.querySelector('#pay'), 'submit', doPay);
    function doPay(event){
