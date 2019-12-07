@@ -1,6 +1,6 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
-var body-parser  = require('body-parser');
+var bodyParser  = require('body-parser');
 var mercadopago = require('mercadopago');
 
 
