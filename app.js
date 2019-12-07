@@ -21,6 +21,8 @@ app.get('/detail', function (req, res) {
 
 
 app.get('/processar_pagamento', function (req, res) {
+
+console.log('processar pagamento ');
     res.render('detail', req.query);
 });
 
