@@ -19,7 +19,7 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.get('/processar_pagamento', function (req, res) {
+app.post('/processar_pagamento', function (req, res) {
   console.log('the response will be sent by the next function ...');
 
 
