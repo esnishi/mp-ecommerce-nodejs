@@ -2,6 +2,8 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 
 var app = express();
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 var bodyParser  = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
@@ -13,9 +15,7 @@ var mercadopago = require('mercadopago');
 var port = process.env.PORT || 3000
 
 
- 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+
 
 app.use(express.static('assets'));
  
