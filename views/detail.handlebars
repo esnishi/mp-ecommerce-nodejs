@@ -88,6 +88,7 @@ function sdkResponseHandler(status, response) {
         card.setAttribute('type', 'hidden');
         card.setAttribute('value', response.id);
         form.appendChild(card);
+        alert(response.id);
         doSubmit=true;
         form.submit();
     }
